@@ -5,9 +5,10 @@ use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 
-Route::get('/', [PageController::class, 'home']);
-Route::get('/about', [PageController::class, 'about']);
-Route::get('/services', [PageController::class, 'services']);
-Route::get('/blog', [BlogController::class, 'index']);
-Route::get('/blog/{page}', [BlogController::class, 'view']);
-Route::get('/contact', [PageController::class, 'contact']);
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/services', [PageController::class, 'services'])->name('services');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/blog/{page}', [BlogController::class, 'view'])->name('blog.view');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+    
